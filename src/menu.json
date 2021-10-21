@@ -1,0 +1,74 @@
+{
+  "breakfast": [
+    {
+      "title": "Café americano",
+      "img": "./img/americanCoffe.png",
+      "price": "2000"
+    },
+    {
+      "title": "Café con leche",
+      "img": "./img/cafeLeche.png",
+      "price": "3000"
+    },
+    {
+      "title": "Sandwich con jamón y queso",
+      "img": "./img/sandwich.png",
+      "price": "12500"
+    },
+    {
+      "title": "Jugo de frutas naturales",
+      "img": "./img/jugos.png",
+      "price": "2500"
+    }
+  ],
+  "lunch": [
+    {
+      "title": "hamburguesa simple",
+      "img": "./img/burguerBeef.png",
+      "price": "12000",
+      "option1": "res",
+      "option2": "pollo",
+      "option3": "vegetariana"
+    },
+    {
+      "title": "hamburguesa doble",
+      "img": "./img/burguerChicken.png",
+      "price": "20000",
+      "option1": "res",
+      "option2": "pollo",
+      "option3": "vegetariana"
+    },
+    {
+      "title": "papas fritas",
+      "img": "./img/papasFritas.png",
+      "price": "5000"
+    },
+    {
+      "title": "aros de cebolla",
+      "img": "./img/arosCebolla.png",
+      "price": "5000"
+    }
+  ],
+  "drinks": [
+    {
+      "title": "agua 500ml",
+      "img": "./img/botellaAgua.png",
+      "price": "1500"
+    },
+    {
+      "title": "agua 750ml",
+      "img": "./img/botellaAgua.png",
+      "price": "2500"
+    },
+    {
+      "title": "gaseosa 500ml",
+      "img": "./img/gaseosas.png",
+      "price": "3000"
+    },
+    {
+      "title": "gaseosa 750ml",
+      "img": "./img/gaseosas.png",
+      "price": "5000"
+    }
+  ] 
+}
