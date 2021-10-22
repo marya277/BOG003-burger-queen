@@ -1,0 +1,11 @@
+.header{
+    /*  background-color: rgb(31, 46, 73); 
+    background: #FFFFFF; */
+    background: linear-gradient(
+        269.13deg, #FFFFFF 0%, rgba(200, 54, 53, 0.501121) 49.89%, rgba(217, 213, 217, 0) 100%
+    );
+    display: flex;
+    justify-content: flex-end;
+   
+
+}
