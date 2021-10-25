@@ -1,11 +1,96 @@
-.header{
-    /*  background-color: rgb(31, 46, 73); 
-    background: #FFFFFF; */
+@font-face {
+    font-family: insanibu;
+    src: url(fuentes/Insanibu.ttf);
+}
+
+.container{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerContainer{
     background: linear-gradient(
         269.13deg, #FFFFFF 0%, rgba(200, 54, 53, 0.501121) 49.89%, rgba(217, 213, 217, 0) 100%
     );
-    display: flex;
-    justify-content: flex-end;
-   
+    position: fixed;
+    width: 100vw;
+    height: 23vh;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
+h1{
+    color: #FFFFFF;
+    font-family: insanibu;
+    font-size: 2.5em;
+    -webkit-text-stroke: 0.5px rgb(109, 3, 3);
+}
+
+.header_logo{
+    height: 20vh;
+}
+
+.question{
+    background: rgba(200, 54, 53, 0.501121);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    width: 72%;
+    margin-top: 30vh;
+    text-align: center;
+}
+
+p{
+    color: snow;
+    text-align: center;
+    -webkit-text-stroke: 0.5px rgb(56, 55, 55);
+    font-family: insanibu;
+    font-size: 1.5em ;
+}
+
+
+.home_icons{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.button-mesero,
+.button-chef
+{
+    background: rgba(200, 54, 53, 0.501121);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+}
+
+h2{
+    color: snow;
+    margin-left: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-text-stroke: 0.5px rgb(56, 55, 55);
+    font-family: insanibu;
+}
+
+/*Estilo para tablet vertical mediaQuery*/
+@media (max-width:671px){
+    .header_logo{
+        display: none;
+    } 
 }
