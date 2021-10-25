@@ -7,23 +7,25 @@ import chef from '../img/chef1.png'
 
 const PagInicio = () => {
     return (
-        <div className="Container">
-        <header className="header">
+        <div className="container">
             <HeaderLogo/>
-        </header>
-        <section className="home_icons mt-3">
-            <div className="">
-                <Link to="/meserxs">
-                    <img src={mesero} alt="img_mesero" />
-                </Link>
-            </div>
-            <div>
-                <Link to="/chef">
-                    <img src={chef} alt="img_chef"/>
-                </Link>
-            </div>
-
-        </section>
+            <section className="question">
+                <p>¿Cuál es tu cargo?</p>
+            </section>
+            <section className="home_icons">
+                <div className="button-mesero">
+                    <h2>Meserx</h2>
+                    <Link to="/meserxs">
+                        <img className="meseroImg" src={mesero} alt="img_mesero" />
+                    </Link>
+                </div>
+                <div className="button-chef">
+                    <h2>Jefe de Cocina</h2>
+                    <Link to="/chef">
+                        <img className="chefImg" src={chef} alt="img_chef" />
+                    </Link>
+                </div>
+            </section>
         </div>
     )
 }
