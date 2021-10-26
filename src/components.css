@@ -16,7 +16,7 @@
     background: linear-gradient(
         269.13deg, #FFFFFF 0%, rgba(200, 54, 53, 0.501121) 49.89%, rgba(217, 213, 217, 0) 100%
     );
-    position: fixed;
+   /*  position: fixed; */
     width: 100vw;
     height: 23vh;
     display:flex;
@@ -87,6 +87,14 @@ h2{
     -webkit-text-stroke: 0.5px rgb(56, 55, 55);
     font-family: insanibu;
 }
+.content{
+    display: none;
+
+}
+
+.active-content {
+    display: block;
+  }
 
 /*Estilo para tablet vertical mediaQuery*/
 @media (max-width:671px){
