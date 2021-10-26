@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 //import logo from './logo.svg';
 import PagInicio from './componentes/inicio.jsx'
+import WaitersView from './componentes/VistaMesero/meseros.jsx'
 import './index.css';
 import './components.css';
 import {
@@ -17,8 +18,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <PagInicio/>
-
           </Route>
+
+          <Route path="/meserxs">
+          <WaitersView></WaitersView>
+          </Route>
+
         </Switch>
 
       </Router>
