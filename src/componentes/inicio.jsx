@@ -1,8 +1,8 @@
 import React from 'react';
 import HeaderLogo from './header_logo.jsx'
 import { Link } from "react-router-dom";
-import mesero from '../img/mesero.png';
-import chef from '../img/chef1.png'
+import mesero from '../assets/img/mesero.png';
+import chef from '../assets/img/chef1.png'
 //import './components.css';
 
 const PagInicio = () => {
