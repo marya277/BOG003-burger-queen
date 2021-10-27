@@ -23,6 +23,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Estilos Página Inicio */
@@ -32,6 +33,7 @@ h1{
     font-family: insanibu;
     font-size: 2.5em;
     -webkit-text-stroke: 0.5px rgb(109, 3, 3);
+    text-align: center
 }
 
 .header_logo{
@@ -40,12 +42,12 @@ h1{
 
 .question{
     background: rgba(200, 54, 53, 0.501121);
-    border: 1px solid #FFFFFF;
+    /* border: 1px solid #FFFFFF; */
     box-sizing: border-box;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    width: 80%;
-    margin: 5vh;
+    /* border-radius: 25px; */
+    width: 100%;
+    margin-top: 5vh;
     text-align: center;
 }
 
@@ -54,8 +56,8 @@ p{
     /* text-align: center; */
     -webkit-text-stroke: 0.5px rgb(56, 55, 55);
     font-family: insanibu;
-    font-size: 20px ;
-    margin-right: 20px;
+    font-size: 1.5em;
+
 }
 
 
@@ -109,6 +111,8 @@ label{
     display: flex;
     flex-flow: column wrap;
     color: aliceblue;
+    -webkit-text-stroke: 0.5px rgb(56, 55, 55);
+    font-family: insanibu;
 }
 
 .input{
@@ -177,8 +181,15 @@ label{
 }
 
 .container-price{
-    width: 100px;
-    align-items: center;    
+    text-align: center;
+}
+
+.card-text{
+        color: snow;
+        -webkit-text-stroke: 0.5px rgb(56, 55, 55);
+        font-family: insanibu;
+        font-size: 20px;
+        width: 150px;
 }
 
 /*Estilo para tablet vertical mediaQuery*/
