@@ -1,7 +1,7 @@
 import botellaAgua from '../assets/img/botellaAgua.png'
-import botellaAguados from '../assets/img/botellaAgua.png';
-import gaseosa from '../assets/img/gaseosas.png'
-import gaseosaDos from '../assets/img/gaseosas.png'
+import botellaAguados from '../assets/img/agua700ml.png';
+import gaseosa from '../assets/img/gaseosa500ml.png'
+import gaseosaDos from '../assets/img/gaseosa700ml.png'
 
 const drinks = {
     items: [
