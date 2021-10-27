@@ -8,8 +8,10 @@ const MenuLunch = () => {
         {
           lunch.items.map(item => {
             return (
-              <div key={item.id}>
-                <img src={item.image} className="card-img-top" alt="..." rel="preload" />
+              <div class= 'container-menu' key={item.id}>
+                <div className='container-img'>
+                  <img src={item.image} className="card-img-top" alt="..." rel="preload" />
+                </div>
                 <p className="card-text">{item.title}</p>
                 <p className="card-text">${item.cost}</p>
 
