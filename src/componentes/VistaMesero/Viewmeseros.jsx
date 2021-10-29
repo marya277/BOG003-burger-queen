@@ -1,27 +1,64 @@
-//import  { useState } from 'react';
-//import db from './firebaseconfig'
-//import swal from 'sweetalert';
-import HeaderLogo from '../header_logo.jsx';
-import FormCustomer from './Form_cliente.jsx';
-import data from '../../data/menu.json';
+import React, {useState} from 'react';
+import HeaderLogo from '../header_logo';
+import ContainerOrder from './ContainerOrder';
+import FormCustomer from './Form_cliente';
+import ProductsContainer from './ProductsContainerMenu';
 
+const ViewMesero = () => {
 
-const WaitersView = () =>  {
+  const initialVlrs = {
+    products: []
+  }
+  const [state, setState] = useState(initialVlrs)
 
-  const dataJson = data.products;
-  
-
-  return (
-    <div className="container">
-      <header>
-        <HeaderLogo></HeaderLogo>
-      </header>
-      <FormCustomer/>
-
-      {dataJson}
-
-    </div>
-  );
+const selectProduct = (product) => {
+  setState((prev) =>({...prev, products: [...prev.products, product]}))
 }
 
-export default WaitersView;
+const handleQuantity = (id, option) => {
+  const filter = state.products.map((item) => {
+    if(item.id === id){
+      if(option === "+"){
+        return{...item, amount: item.amount + 1};
+      }else if(option === "-" && item.amount > 1){
+        return{...item, amount: item.amount - 1};
+      }
+    }
+    return item;
+  });
+  setState((prev) => ({...prev, products: filter}))
+};
+
+const handleRemove = (id) =>{
+  const newList = state.products.filter(item => item.id !== id)
+  setState((prev) => ({...prev, products: newList}))
+}
+
+return(
+  <div>
+     <header>
+    <HeaderLogo/>
+    </header>
+    <section>
+      <FormCustomer/>
+    </section>
+    <article>
+      <ProductsContainer
+      selectProduct={selectProduct}
+      state={state}
+      handleQuantity={handleQuantity}  />
+      <ContainerOrder
+      state={state}
+      setState={setState}
+      handleQuantity={handleQuantity}
+      handleRemove={handleRemove}
+      />
+    </article>
+
+  </div>
+)
+
+}
+
+export default ViewMesero;
+

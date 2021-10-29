@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import React from 'react';
 import logo from '../assets/img/logoKK.png';
-import veinte from '../assets/img/veinte.png';
+import veinte from  '../assets/img/veinte.png';
 
 
 const HeaderLogo = () => {
