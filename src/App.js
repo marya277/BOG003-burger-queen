@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 //import logo from './logo.svg';
 import PagInicio from './componentes/inicio.jsx'
-import WaitersView from './componentes/VistaMesero/meseros.jsx'
+import WaitersView from './componentes/VistaMesero/Viewmeseros.jsx'
 import './index.css';
 import './components.css';
 import {
