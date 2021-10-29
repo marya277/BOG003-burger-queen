@@ -1,74 +1,123 @@
 {
-  "breakfast": [
+  "products": [
     {
-      "title": "Café americano",
-      "img": "./img/americanCoffe.png",
-      "price": "2000"
+      "id": "1",
+      "name": "Café americano",
+      "price": "2000",
+      "type": "Desayuno",
+      "img": "./img/americanCoffe.png"
     },
     {
-      "title": "Café con leche",
-      "img": "./img/cafeLeche.png",
-      "price": "3000"
+      "id": "2",
+      "name": "Café con leche",
+      "price": "3000",
+      "type": "Desayuno",
+      "img": "./img/cafeLeche.png"
     },
     {
-      "title": "Sandwich con jamón y queso",
-      "img": "./img/sandwich.png",
-      "price": "12500"
+      "id": "3",
+      "name": "Sandwich de jamón y queso",
+      "price": "12500",
+      "type": "Desayuno",
+      "img":"./img/sandwich.png"
     },
     {
-      "title": "Jugo de frutas naturales",
-      "img": "./img/jugos.png",
-      "price": "2500"
-    }
-  ],
-  "lunch": [
+      "id": "4",
+      "name": "Jugo de frutas natural",
+      "price": "2500",
+      "type": "Desayuno",
+      "img": "./img/jugos.png"
+    },
     {
-      "title": "hamburguesa simple",
-      "img": "./img/burguerBeef.png",
+      "id": "5",
+      "name": "Hamburguesa simple de res",
       "price": "12000",
-      "option1": "res",
-      "option2": "pollo",
-      "option3": "vegetariana"
+      "type": "Hamburguesas",
+      "extra": ["Queso", "Huevo"],
+      "img":"./img/burguerBeef.png"
     },
     {
-      "title": "hamburguesa doble",
-      "img": "./img/burguerChicken.png",
+      "id": "6",
+      "name": "Hamburguesa doble de res",
       "price": "20000",
-      "option1": "res",
-      "option2": "pollo",
-      "option3": "vegetariana"
+      "type": "Hamburguesas",
+      "extra": ["Queso", "Huevo"],
+      "img":"./img/burguerBeef.png"
     },
     {
-      "title": "papas fritas",
-      "img": "./img/papasFritas.png",
-      "price": "5000"
+      "id": "7",
+      "name": "Hamburguesa simple de pollo",
+      "price": "12000",
+      "type": "Hamburguesas",
+      "extra": ["Queso", "Huevo"],
+      "img":"./img/burguerChicken.png"
     },
     {
-      "title": "aros de cebolla",
-      "img": "./img/arosCebolla.png",
-      "price": "5000"
+      "id": "8",
+      "name": "Hamburguesa doble de pollo",
+      "price": "20000",
+      "type": "Hamburguesas",
+      "extra": ["Queso", "Huevo"],
+      "img":"./img/burguerChicken.png"
+    },
+    {
+      "id": "9",
+      "name": "Hamburguesa simple vegetariana",
+      "price": "12000",
+      "type": "Hamburguesas",
+      "extra": ["Queso", "Huevo"],
+      "img": "./img/vegetarianburger.png"
+    },
+    {
+      "id": "10",
+      "name": "Hamburguesa doble vegetariana",
+      "price": "20000",
+      "type": "Hamburguesas",
+      "extra": ["Queso", "Huevo"],
+      "img":"./img/vegetarianburger.png"
+    },
+    {
+      "id": "11",
+      "name": "Papas fritas",
+      "price": "5000",
+      "type": "Acompañamientos",
+      "img": "./img/papasFritas.png"
+    },
+    {
+      "id": "12",
+      "name": "Aros de cebolla",
+      "price": "5000",
+      "type": "Acompañamientos",
+      "img":"./img/arosCebolla.png"
+    },
+    {
+      "id": "13",
+      "name": "Agua 500ml",
+      "price": "1500",
+      "type": "Bebidas",
+      "img":"./img/botellaAgua.png"
+    },
+    {
+      "id": "14",
+      "name": "Agua 750ml",
+      "price": "2500",
+      "type": "Bebidas",
+      "img": "./img/agua700ml.png"
+    },
+    {
+      "id": "15",
+      "name": "gaseosa 500ml",
+      "price": "3000",
+      "type": "Bebidas",
+      "img":"./img/gaseosa500ml.png"
+    },
+    {
+      "id": "16",
+      "name": "gaseosa 750ml",
+      "price": "5000",
+      "type": "Bebidas",
+      "img": "./img/gaseosa700ml.png"
     }
-  ],
-  "drinks": [
-    {
-      "title": "agua 500ml",
-      "img": "./img/botellaAgua.png",
-      "price": "1500"
-    },
-    {
-      "title": "agua 750ml",
-      "img": "./img/botellaAgua.png",
-      "price": "2500"
-    },
-    {
-      "title": "gaseosa 500ml",
-      "img": "./img/gaseosas.png",
-      "price": "3000"
-    },
-    {
-      "title": "gaseosa 750ml",
-      "img": "./img/gaseosas.png",
-      "price": "5000"
-    }
-  ] 
+  ]
 }
+
