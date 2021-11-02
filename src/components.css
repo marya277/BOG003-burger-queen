@@ -3,20 +3,15 @@
     src: url(fuentes/Insanibu.ttf);
 }
 
-.container{
+.container-fluid{
     height: auto;
-    width: 100vw;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    /* align-items: center; */
+    width: 100%;
 }
 
 .headerContainer{
     background: linear-gradient(
         269.13deg, #FFFFFF 0%, rgba(200, 54, 53, 0.501121) 49.89%, rgba(217, 213, 217, 0) 100%
     );
-   /*  position: fixed; */
     width: 100vw;
     height: 23vh;
     display:flex;
@@ -36,7 +31,7 @@ h1{
     text-align: center
 }
 
-.header_logo{
+.header_logo, .header_logo1{
     height: 20vh;
 }
 
@@ -53,7 +48,6 @@ h1{
 
 p{
     color: snow;
-    /* text-align: center; */
     -webkit-text-stroke: 0.5px rgb(56, 55, 55);
     font-family: insanibu;
     font-size: 1.5em;
@@ -103,7 +97,8 @@ h2{
 }
 
 label{
-    padding: 5px;
+    padding: 10px;
+    margin: 10px;
     background: rgba(200, 54, 53, 0.701121);
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
@@ -120,81 +115,126 @@ label{
     margin: 5px
 }
 
-/* Estilo Menu Tabs */
 
-.container-tabs{
-    margin: 30px 10px 10px 50px;
-    width: 50%;
-}
-
-.content-tabs{
+/* ! estilos menu nav bar */
+.nav-link{
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
     background: rgba(200, 54, 53, 0.501121);
-    border-radius: 20px;
-}
-
-.tabs{
+    border-radius: 10px;
     color: #FFFFFF;
     font-family: insanibu;
-    background: rgba(36, 36, 114, 0.411);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+}
+
+.nav-item{
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    background: rgba(200, 54, 53, 0.501121);
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: small;
+}
+/* ! Fin estilos menu nav bar */
+
+/* ? estilos active nav bar */
+.nav-pills .nav-link.active{
+    background:#cca831;
+    border-bottom: 1px solid transparent;
+  }
+
+/* ! Fin estilos active nav bar */
+
+
+/* ! estilos contenedor menu */
+
+.contenerdorMenu{
+    padding-left: 0px;
+    background: rgba(200, 54, 53, 0.501121);
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+}
+
+.container-product{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
     padding: 10px;
 }
 
-.active-tabs  {
-    background:#cca831;
-    border-bottom: 1px solid transparent;
-    transform: scale(1.1) translate(0%, -10%);
-    transition: transform 1s;
-    cursor: pointer;
-  }
-  
-.content{
-    display: none;
+/* ! Fin estilos contenedor menu */
 
-}
-
-.active-content {
-    display: block;
-}
-
-
-.container-menu{
+/* ! estilos elementos dentro del menu*/
+.text-menu{
+    font-size: 18px;
     display: flex;
-    border: 1px solid #FFFFFF;
+    justify-content: center;
     align-items: center;
 }
 
 .container-img{
-    width: 150px;
+    width: 100px;
     margin: 10px;
     display: flex;
     justify-content: center;
 }
 
-.container-food{
-    width: 230px;
+/* ! Fin estilos elementos dentro del menu*/
+
+/* ! estilos contenedor resumen del pedido*/
+.resume-order{
+    padding-left: 0px;
+    background: rgba(200, 54, 53, 0.6);
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+    padding: 10px;
     display: flex;
+    flex-flow: row;
+}
+
+/* ? estilos textos contenedor resumen del pedido*/
+h3{
+    font-size: 25px;
+    font-family: insanibu;
+    color: #FFFFFF;
+}
+
+h4{
+    font-size: 18px;
+    font-family: insanibu;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* ? estilos contenedor btns contador*/
+.count-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.container-price{
-    text-align: center;
+.total-value{
+    text-align: end;
 }
 
-.card-text{
-        color: snow;
-        -webkit-text-stroke: 0.5px rgb(56, 55, 55);
-        font-family: insanibu;
-        font-size: 20px;
-        width: 150px;
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
+
+/* ! Fin estilos contenedor resumen del pedido*/
+
 
 /*Estilo para tablet vertical mediaQuery*/
 @media (max-width:671px){
     .header_logo{
         display: none;
+    }
+    .header_logo1{
+        height: 80px;
+    } 
+    h2{
+        height: 10px;
     } 
 }
