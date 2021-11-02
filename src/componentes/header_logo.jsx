@@ -10,7 +10,7 @@ const HeaderLogo = () => {
             <img className="header_logo" src={veinte}  alt="logo24"/>
             <h1>KRUSTY KRAB FOOD</h1>
             <Link to="/">
-                <img className="header_logo" src={logo} alt="logo_Pagina"/>
+                <img className="header_logo1" src={logo} alt="logo_Pagina"/>
             </Link>
         </div>
     );

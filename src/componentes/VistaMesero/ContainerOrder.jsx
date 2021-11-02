@@ -12,14 +12,18 @@ import OrderProduct from './SumaOrder.jsx';
     };
 
     return(
-        <div onSubmit={handleSubmit}>
-            <h3>Pedido</h3>
+        <div className="container" onSubmit={handleSubmit}>
+            <h3 className="border-bottom border-light">Resumen del pedido</h3>
             <section>
-                <div>
-                    <h4>Productos</h4>
-                    <h4>Valor</h4>
+                <div className="row">
+                    <h4 className="col-4 border border-white">Productos</h4>
+                    <h4 className="col-5 border border-white">Cantidad</h4>
+                    <h4 className="col-3 border border-white">Valor</h4>
                 </div>
-                <aside>
+                <aside className="row">
+                    <div className="col-6">
+
+                    </div>
                     {state.products.map((item) =>(
                     <OrderProduct
                     key={item.id}
@@ -28,7 +32,7 @@ import OrderProduct from './SumaOrder.jsx';
                     handleRemove={handleRemove}
                     />
                     ))}
-                    <h3> Total: $ {SumTotal(state.products)}</h3>
+                    <h3 className="total-value"> Total: $ {SumTotal(state.products)}</h3>
                     {
                         state.products > 0 ?
                         <h3>Total: $ {SumTotal(state.products)}</h3>
@@ -38,10 +42,13 @@ import OrderProduct from './SumaOrder.jsx';
                 </aside>
             </section>
 
-            <button>Enviar a cocina</button>
-            <button>Cancelar Pedido</button>
+            <div className="button-container">
+                <button type="button" className="btn btn-warning">Enviar a cocina</button>
+                <button type="button" className="btn btn-danger" >Cancelar Pedido</button>
+            </div>
         </div>
     );
 };
 
 export default ContainerOrder;
+

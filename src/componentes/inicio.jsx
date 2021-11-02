@@ -7,7 +7,7 @@ import chef from '../assets/img/chef1.png'
 
 const PagInicio = () => {
     return (
-        <div className="container">
+        <div className="container-fluid">
             <HeaderLogo/>
             <section className="question">
                 <p>¿Cuál es tu cargo?</p>
