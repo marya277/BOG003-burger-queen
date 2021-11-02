@@ -12,13 +12,20 @@ const Product = ({state, handleQuantity,selectProduct, product}) => {
     }
 
     return(
-        <div>
-            <img src={product.img} alt=""/>
-            <div>
-                <li>{product.name}</li>
-                <p>$ {product.price}</p>
+        <div className="container-fluid">
+            <div className="row border-bottom border-primary">
+                <div className="container-img col-4">
+                    <img src={product.img} alt=""/>
+                </div>
+            
+                <p className="text-menu col-3">{product.name}</p>
+           
+                <p className="text-menu col-3">$ {product.price}</p>
+
+                <div className="text-menu col-2">
+                    <button type="button" class="btn btn-warning" onClick={() => addProducts(product.id)}>Agregar</button>
+                </div>
             </div>
-            <button onClick={() => addProducts(product.id)}>Agregar</button>
         </div>
     )
 
