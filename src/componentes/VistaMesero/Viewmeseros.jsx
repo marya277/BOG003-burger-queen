@@ -36,23 +36,34 @@ const handleRemove = (id) =>{
 
 return(
   <div>
-     <header>
+    <header>
     <HeaderLogo/>
     </header>
+    
     <section>
       <FormCustomer/>
     </section>
-    <article>
-      <ProductsContainer
-      selectProduct={selectProduct}
-      state={state}
-      handleQuantity={handleQuantity}  />
-      <ContainerOrder
-      state={state}
-      setState={setState}
-      handleQuantity={handleQuantity}
-      handleRemove={handleRemove}
-      />
+
+    <article className="container-fluid">
+      <div className="row mt-3" >
+        <div className="col-6">
+          <ProductsContainer
+            selectProduct={selectProduct}
+            state={state}
+            handleQuantity={handleQuantity}
+          />
+        </div>
+
+        <div className="resume-order col-6">
+          <ContainerOrder
+            state={state}
+            setState={setState}
+            handleQuantity={handleQuantity}
+            handleRemove={handleRemove}
+          />
+        </div>
+      </div>
+      
     </article>
 
   </div>
