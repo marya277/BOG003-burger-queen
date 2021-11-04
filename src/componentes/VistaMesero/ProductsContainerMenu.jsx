@@ -3,12 +3,13 @@ import React, {useState} from 'react';
 import dataJson from '../../data/menu.json';
 import Product from './ProductMenu.jsx';
 
+
 const ProductsContainer = ({selectProduct, state, handleQuantity }) => {
     const data = dataJson.products;
 
     const mainView = data.filter((element) => element.type === "Desayuno");
     const [products, setproducts] = useState(mainView);
-
+    
     const productsType = (option) => {
         // eslint-disable-next-line default-case
         switch(option){
@@ -31,6 +32,7 @@ const ProductsContainer = ({selectProduct, state, handleQuantity }) => {
         }
     };
 
+
     return(
         <section className="container-fluid">
             <div className="row">
@@ -48,6 +50,8 @@ const ProductsContainer = ({selectProduct, state, handleQuantity }) => {
                  <li class="nav-item" role="presentation">
                      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" onClick={() => productsType("Bebidas")}>Bebidas</button>
                  </li>
+             </ul>
+             <ul>
              </ul>
  
             </div>
