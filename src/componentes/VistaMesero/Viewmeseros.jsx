@@ -1,15 +1,19 @@
 import React, {useState} from 'react';
 import HeaderLogo from '../header_logo';
 import ContainerOrder from './ContainerOrder';
-import FormCustomer from './Form_cliente';
+//import FormCustomer from './Form_cliente';
 import ProductsContainer from './ProductsContainerMenu';
+
 
 const ViewMesero = () => {
 
-  const initialVlrs = {
-    products: []
+  const objOrder = {
+    customer: "",
+    table: "",
+    products: [],
+  
   }
-  const [state, setState] = useState(initialVlrs)
+  const [state, setState] = useState(objOrder)
 
 const selectProduct = (product) => {
   setState((prev) =>({...prev, products: [...prev.products, product]}))
@@ -34,15 +38,12 @@ const handleRemove = (id) =>{
   setState((prev) => ({...prev, products: newList}))
 }
 
+
 return(
   <div>
     <header>
     <HeaderLogo/>
     </header>
-    
-    <section>
-      <FormCustomer/>
-    </section>
 
     <article className="container-fluid">
       <div className="row mt-3" >
@@ -60,12 +61,11 @@ return(
             setState={setState}
             handleQuantity={handleQuantity}
             handleRemove={handleRemove}
+            objOrder={objOrder}
           />
         </div>
       </div>
-      
     </article>
-
   </div>
 )
 
