@@ -47,7 +47,7 @@ return(
 
     <article className="container-fluid">
       <div className="row mt-3" >
-        <div className="col-6">
+        <div className="col-12 col-md-12 col-lg-6">
           <ProductsContainer
             selectProduct={selectProduct}
             state={state}
@@ -55,7 +55,7 @@ return(
           />
         </div>
 
-        <div className="resume-order col-6">
+        <div className="resume-order col-12 col-md-12 col-lg-6">
           <ContainerOrder
             state={state}
             setState={setState}
