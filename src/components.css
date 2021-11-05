@@ -205,6 +205,10 @@ h4{
     color: #FFFFFF;
 }
 
+.productValue{
+    text-align: right;
+}
+
 /* ? estilos contenedor btns contador*/
 .count-container{
     display: flex;
@@ -215,12 +219,18 @@ h4{
 
 .total-value{
     text-align: end;
+    margin-top: 10px;
 }
 
 .button-container{
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+}
+
+.deleteBotton{
+    position:relative;  
+    top:-62px; 
 }
 
 /* ! Fin estilos contenedor resumen del pedido*/
