@@ -2,6 +2,7 @@ import React from 'react';
 import OrderProduct from './SumaOrder.jsx';
 import { createOrder } from '../../firebase/firestore.js'
 import swal from 'sweetalert';
+import Form from 'react-bootstrap/Form'
 
  const ContainerOrder = ({handleQuantity, handleRemove, state, setState, objOrder }) => {
     const sumTotal = (products) => {
@@ -26,11 +27,11 @@ import swal from 'sweetalert';
 
     return (
         <div>
-        <form className="orderList" onSubmit={handleSubmit}>
-         {/*  Sección para input cliente y mesa */}
+        <form className="container-fluid" onSubmit={handleSubmit}>
+          {/*  Sección para input cliente y mesa */}
           <div className="row">
-            <div className="col-5 m-3">
-              <input
+            <div className="col-6 m-3">
+              <Form.Control className='input'
                 type="text"
                 name="customer"
                 onChange={handleInputChange}
@@ -39,24 +40,25 @@ import swal from 'sweetalert';
                 required
               />
             </div>
-            <div className="col-5 m-3">
-              <input
+            <div className="col-4 m-3">
+              <Form.Control className='input'
                 type="number"
                 name="table"
                 onChange={handleInputChange}
                 value={state.table}
-                placeholder="Número de mesa"
+                placeholder="Mesa No."
                 required
               />
             </div>
           </div>
-          <h3>Resumen del pedido</h3>
+          <h3 className="border-bottom border-light text-center">Resumen del pedido</h3>
           <section className="orderDetails">
-            <div className="titles">
-              <h4>Productos</h4>
-              <h4>Precio</h4>
+            <div className="row">
+              <h4 className="col-4 border border-white">Productos</h4>
+              <h4 className="col-5 border border-white">Cantidad</h4>
+              <h4 className="col-3 border border-white">Valor</h4>
             </div>
-            <aside className="sumary">
+            <aside className="row">
               {state.products.map((item) => (
                 <OrderProduct
                   key={item.id}
@@ -65,31 +67,30 @@ import swal from 'sweetalert';
                   handleRemove={handleRemove}
                 />
               ))}
-              <h3>Total:  $ {sumTotal(state.products)} </h3>
-              
+              <h3 className="total-value">Total:  $ {sumTotal(state.products)} </h3>
+
             </aside>
           </section>
-          
-          <button className="submitButton" onClick={() =>{
-            if(!state.customer.trim()){
+
+          <button className="btn btn-warning mt-3 btn-lg" onClick={() => {
+            if (!state.customer.trim()) {
               swal("Falta completar el nombre del cliente", "", "error");
-            } else if(!state.table){
+            } else if (!state.table) {
               swal("Falta completar número de mesa", "", "error");
             }
-            else{
+            else {
               swal("Excelente", "Orden registrada", "success");
             }
           }} >
-            Enviar a cocina
-          </button> 
-          </form>
+            👩‍🍳 Enviar a cocina
+          </button>
+        </form>
           
-         {/*  Boton para cancelar pedido */}
-        <form>
-          <button  className="submitButton"  onClick={() =>{
-           
+        {/*  Boton para cancelar pedido */}
+        <form class="position-absolute end-0">
+          <button className="deleteBotton btn btn-danger m-4" onClick={() =>{
           }} >
-           Cancelar Pedido
+          ✖️Cancelar Pedido
           </button>  
         </form>
         </div>
